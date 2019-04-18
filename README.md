@@ -4,7 +4,7 @@
 Set off an alert, when a word occurs for more than X number of times in a sliding window of M minutes in a stream of text (like Tweets)
 
 ### Assumptions
-* Time at which the tweet is generated and the time at which the tweet is processed is the same. The difference between them is zero. 
+* Time at which the tweet is generated and the time at which the tweet is processed is the same. The difference between them is zero (negligible). 
 * This solution is running on a system that has has infinite resources (Not a distributed Systems problem)
 * No usage of any third party softwares whether open source or properitary. (For example: Map-Reduce, Spark, Storm or Kafka QL.
 
@@ -64,7 +64,7 @@ java -jar target/stream-alert-0.0.1-jar-with-dependencies.jar <NUM-OCCURRENCES> 
    time
    ALERT
   going
-```
+  ```
 
-  The above example would print out alerts when a non-stopword word occurrences is equal to or greater than 10000 for a sliding period of 1 minute, from the simulated tweets The counts are accurate upto a second.
+  The above example would print out alerts when a non-stopword word occurrences is equal to or greater than 10000 for a sliding period of 1 minute, from the simulated tweets. The counts are accurate upto a second.
 
