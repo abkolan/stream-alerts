@@ -45,12 +45,26 @@ The sample tweets can be extracted by running:
 3. This repo also comes with a script `gen-tweets.sh` that would randomly generate 1000000 tweets per second from the `sample-tweets` file. Tweets per minute can be modifed in the `gen-tweets.sh`
 
 4. Run the simulation
-`./random.sh | 
+`./gen-tweets.sh | 
 java -jar target/stream-alert-0.0.1-jar-with-dependencies.jar <NUM-OCCURRENCES> <TIME-INTERVAL-IN-MIN> <IGNORE-STOP-WORDS>`
 
 
   Example:
-  `./random.sh | java -jar target/stream-alert-0.0.1-jar-with-dependencies.jar 10000 1 true`
+  `./gen-tweets.sh | java -jar target/stream-alert-0.0.1-jar-with-dependencies.jar 10000 1 true`
+  
+  Excerpt of the output
+  ```
+   ALERT
+   back
+   ALERT
+   love
+   ALERT
+   good
+   ALERT
+   time
+   ALERT
+  going
+```
 
   The above example would print out alerts when a non-stopword word occurrences is equal to or greater than 10000 for a sliding period of 1 minute, from the simulated tweets The counts are accurate upto a second.
 
