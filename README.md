@@ -42,7 +42,7 @@ For example:
 The sample tweets can be extracted by running:   
 `tar -xf sample-tweets.tar.gz`
 
-3. This repo also comes with a script `gen-tweets.sh` that would randomly generate 1000000 tweets per second from the `sample-tweets` file. Tweets per minute can be modifed in the `gen-tweets.sh`
+3. This repo has a simulation script `gen-tweets.sh` that would randomly generate 1000000 tweets per second from the `sample-tweets` file. Tweets per minute can be modifed in the `gen-tweets.sh`
 
 4. Run the simulation
 `./gen-tweets.sh | 
