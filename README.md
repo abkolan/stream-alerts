@@ -14,7 +14,7 @@ Set off an alert, when a word occurs for more than X number of times in a slidin
 
 ![](https://github.com/abkolan/stream-alerts/blob/master/media/image.png?raw=true)
 
-1. Each Tweet recieved at a stream. The stream reads from `STDIN`
+1. Each Tweet received at a stream. The stream reads from `STDIN`
 2. Each Tweet is then tokenized to separate out the words, using `java.util.StringTokenizer`. 
 3. If StopWord scanning is enabled, Stop words from the English language are ignored and are not taken into account. Stop words are from [NLTK's list of english stopwords](https://gist.github.com/sebleier/554280)
 4. Each token is emitted with the TimeStamp in epoch, rounded of to the nearest second.  
