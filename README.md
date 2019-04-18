@@ -1,7 +1,7 @@
 # stream-alerts
 
 ### Problem
-Set off an alert, when a word occurs for more than X number of times in a sliding window of M minutes.
+Set off an alert, when a word occurs for more than X number of times in a sliding window of M minutes in a stream of text (like Tweets)
 
 ### Assumptions
 * Time at which the tweet is generated and the time at which the tweet is processed is the same. The difference between them is zero. 
@@ -42,15 +42,15 @@ For example:
 The sample tweets can be extracted by running:   
 `tar -xf sample-tweets.tar.gz`
 
-3. This repo also comes with a script `gen-tweets.sh` that would randomly generate 1000000 tweets per second from the `sample-tweets` file.  
+3. This repo also comes with a script `gen-tweets.sh` that would randomly generate 1000000 tweets per second from the `sample-tweets` file. Tweets per minute can be modifed in the `gen-tweets.sh`
 
 4. Run the simulation
-```./random.sh | 
-java -jar target/stream-alert-0.0.1-jar-with-dependencies.jar <NUM-OCCURRENCES> <TIME-INTERVAL-IN-MIN> <IGNORE-STOP-WORDS>```
+`./random.sh | 
+java -jar target/stream-alert-0.0.1-jar-with-dependencies.jar <NUM-OCCURRENCES> <TIME-INTERVAL-IN-MIN> <IGNORE-STOP-WORDS>`
 
 
   Example:
   `./random.sh | java -jar target/stream-alert-0.0.1-jar-with-dependencies.jar 10000 1 true`
 
-  This would print out alerts when a non-stopword word occurrences is equal to or greater than 10000 for a sliding period of 1 minute. The counts are accurate upto a second.
+  The above example would print out alerts when a non-stopword word occurrences is equal to or greater than 10000 for a sliding period of 1 minute, from the simulated tweets The counts are accurate upto a second.
 
